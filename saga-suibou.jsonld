@@ -1,0 +1,59 @@
+{
+	"@context": {
+	 	"WaterLevel": "https://api.hyper-local.jp/suibou/WaterLevel",
+	 	"TidalLevel": "https://api.hyper-local.jp/suibou/TidalLevel",
+	 	"RiverLevel": "https://api.hyper-local.jp/suibou/RiverLevel",
+	 	"WindDirection": "https://api.hyper-local.jp/suibou/WindDirection",
+	 	"WarningLevel": "https://api.hyper-local.jp/suibou/WarningLevel",
+	 	"PointOfInterest": "https://api.hyper-local.jp/suibou/PointOfInterest",
+	 	"River": "https://api.hyper-local.jp/suibou/River",
+	 	"riverLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/riverLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WaterLevel"
+	 	},
+	 	"refPointOfInterest": {
+	 		"@id" : "https://api.hyper-local.jp/suibou/refPointOfInterest",
+	 		"@type" : "https://api.hyper-local.jp/suibou/refPointOfInterest"
+	 	},
+	 	"refWarningLevel": {
+	 		"@id" : "https://api.hyper-local.jp/suibou/refWarningLevel",
+	 		"@type" : "https://api.hyper-local.jp/suibou/refWarningLevel"
+	 	},
+	 	"refRiver": {
+	 		"@id" : "https://api.hyper-local.jp/suibou/refRiver",
+	 		"@type" : "https://api.hyper-local.jp/suibou/refRiver"
+	 	},
+	 	"differenceFromPreviousLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/differenceFromPreviousLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WaterLevel"
+	 	},
+	 	"evacuationLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/evacuationLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WarningLevel"
+	 	},
+	 	"floodBrigadeWaitingLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/floodBrigadeWaitingLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WarningLevel"
+	 	},
+	 	"floodAlertLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/floodAlertLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WarningLevel"
+	 	},
+	 	"floodHazardLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/floodHazardLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WarningLevel"
+	 	},
+	 	"evacuationLevel": {
+		  "@id" : "https://api.hyper-local.jp/suibou/evacuationLevel",
+		  "@type" : "https://api.hyper-local.jp/suibou/WarningLevel"
+	 	},
+	 	"maintenance": {
+		  "@id" : "https://api.hyper-local.jp/suibou/maintenance",
+	 	},
+	 	"dateRetrieved": "https://api.hyper-local.jp/suibou/dateRetrieved",
+	 	"drainageSystem": {
+		  "@id" : "https://api.hyper-local.jp/suibou/drainageSystem",
+		  "@type" : "https://api.hyper-local.jp/suibou/River"
+	 	}
+ 	} 
+}
