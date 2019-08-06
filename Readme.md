@@ -6,6 +6,7 @@ Diagrams in Japanese are showed in Suibou('Ymd').pdf.
 
 -----
 
-# 水防オントロジー，NGSI-LDで取り扱うためのJSON-LD形式コンテキストデータ設計の例
-佐賀県の水防情報をオントロジーにして、NGSI-LDのAPIで取り扱うため、JSON-LD形式コンテキストデータの作成を行いました。
+# 水防オントロジーおよびNGSI-LDで取り扱うためのJSON-LD形式コンテキストデータ設計の例
+佐賀県の水防情報からオントロジーを構築しました。また、NGSI-LDのAPIで取り扱うため、JSON-LD形式コンテキストデータの作成を行いました。
 オントロジー（OWLファイル）は、Protégéで開けます。
+
