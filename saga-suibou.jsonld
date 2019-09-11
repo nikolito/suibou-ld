@@ -5,15 +5,10 @@
 	 	"RiverLevel": "https://api.hyper-local.jp/suibou/RiverLevel",
 	 	"WindDirection": "https://api.hyper-local.jp/suibou/WindDirection",
 	 	"WarningLevel": "https://api.hyper-local.jp/suibou/WarningLevel",
-	 	"PointOfInterest": "https://api.hyper-local.jp/suibou/PointOfInterest",
 	 	"River": "https://api.hyper-local.jp/suibou/River",
 	 	"riverLevel": {
 		  "@id" : "https://api.hyper-local.jp/suibou/riverLevel",
 		  "@type" : "https://api.hyper-local.jp/suibou/WaterLevel"
-	 	},
-	 	"refPointOfInterest": {
-	 		"@id" : "https://api.hyper-local.jp/suibou/refPointOfInterest",
-	 		"@type" : "https://api.hyper-local.jp/suibou/refPointOfInterest"
 	 	},
 	 	"refWarningLevel": {
 	 		"@id" : "https://api.hyper-local.jp/suibou/refWarningLevel",
