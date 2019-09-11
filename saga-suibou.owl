@@ -85,29 +85,10 @@
     
 
 
-    <!-- https://api.hyper-local.jp/suibou/refPointOfInterest -->
-
-    <owl:ObjectProperty rdf:about="https://api.hyper-local.jp/suibou/refPointOfInterest">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RiverLevel"/>
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class, WaterLevel references to a class, PointOfInterest.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://api.hyper-local.jp/suibou/refRiver -->
 
     <owl:ObjectProperty rdf:about="https://api.hyper-local.jp/suibou/refRiver">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="https://api.hyper-local.jp/suibou/River"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class, PointOfInterest references to a class, River.</rdfs:comment>
     </owl:ObjectProperty>
@@ -120,13 +101,32 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WarningLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
+                    <rdf:Description rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class, WaterLevel references to a class, Warning Level.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://uri.fiware.org/ns/datamodels#refPointOfInterest -->
+
+    <owl:ObjectProperty rdf:about="https://uri.fiware.org/ns/datamodels#refPointOfInterest">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RainLevel"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class, WaterLevel references to a class, PointOfInterest.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -148,13 +148,13 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RainLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/River"/>
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RiverLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WarningLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
+                    <rdf:Description rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -166,7 +166,7 @@
     <!-- http://uri.etsi.org/ngsi-ld/location -->
 
     <owl:DatatypeProperty rdf:about="http://uri.etsi.org/ngsi-ld/location">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8Zz8f7tcAdPNOQF0EFIXk"/>
         <rdfs:label xml:lang="ja">世界測地系緯度経度</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q638949"/>
@@ -177,7 +177,7 @@
     <!-- http://uri.etsi.org/ngsi-ld/observationSpace -->
 
     <owl:DatatypeProperty rdf:about="http://uri.etsi.org/ngsi-ld/observationSpace">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="ja">所在地</rdfs:label>
     </owl:DatatypeProperty>
@@ -190,7 +190,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RiverLevel"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RainLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
@@ -209,13 +209,13 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RainLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/River"/>
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RiverLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WarningLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
+                    <rdf:Description rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -230,9 +230,9 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/River"/>
                     <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WarningLevel"/>
+                    <rdf:Description rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -309,7 +309,7 @@
     <!-- https://api.hyper-local.jp/suibou/maintenance -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/maintenance">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">A maintainer of a POI.</rdfs:comment>
         <rdfs:label xml:lang="ja">観測所管理者名</rdfs:label>
@@ -320,7 +320,7 @@
     <!-- https://api.hyper-local.jp/suibou/observatoryName -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/observatoryName">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">A name of a POI</rdfs:comment>
         <rdfs:label xml:lang="ja">観測所名</rdfs:label>
@@ -331,7 +331,7 @@
     <!-- https://api.hyper-local.jp/suibou/rainLevel10min -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/rainLevel10min">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RiverLevel"/>
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RainLevel"/>
         <rdfs:label xml:lang="ja">10分雨量[mm]</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -340,7 +340,7 @@
     <!-- https://api.hyper-local.jp/suibou/rainLevel1hr -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/rainLevel1hr">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RiverLevel"/>
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RainLevel"/>
         <rdfs:label xml:lang="ja">時間雨量[mm]</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -349,7 +349,7 @@
     <!-- https://api.hyper-local.jp/suibou/rainLevel24hrs -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/rainLevel24hrs">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RiverLevel"/>
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RainLevel"/>
         <rdfs:label xml:lang="ja">24時間雨量[mm]</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -358,7 +358,7 @@
     <!-- https://api.hyper-local.jp/suibou/rainLevelMass -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/rainLevelMass">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RiverLevel"/>
+        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/RainLevel"/>
         <rdfs:label xml:lang="ja">累加雨量[mm]</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -387,7 +387,7 @@
     <!-- https://api.hyper-local.jp/suibou/target -->
 
     <owl:DatatypeProperty rdf:about="https://api.hyper-local.jp/suibou/target">
-        <rdfs:domain rdf:resource="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+        <rdfs:domain rdf:resource="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="ja">観測項目</rdfs:label>
     </owl:DatatypeProperty>
@@ -435,11 +435,10 @@
     
 
 
-    <!-- https://api.hyper-local.jp/suibou/PointOfInterest -->
+    <!-- https://api.hyper-local.jp/suibou/RainLevel -->
 
-    <owl:Class rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest">
-        <rdfs:label>POI</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q960648"/>
+    <owl:Class rdf:about="https://api.hyper-local.jp/suibou/RainLevel">
+        <rdfs:label xml:lang="ja">雨量</rdfs:label>
     </owl:Class>
     
 
@@ -448,14 +447,6 @@
 
     <owl:Class rdf:about="https://api.hyper-local.jp/suibou/River">
         <rdfs:label xml:lang="ja">河川</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://api.hyper-local.jp/suibou/RiverLevel -->
-
-    <owl:Class rdf:about="https://api.hyper-local.jp/suibou/RiverLevel">
-        <rdfs:label xml:lang="ja">雨量</rdfs:label>
     </owl:Class>
     
 
@@ -497,6 +488,15 @@
 
     <owl:Class rdf:about="https://api.hyper-local.jp/suibou/WindDirection">
         <rdfs:label xml:lang="ja">風向</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://uri.fiware.org/ns/datamodels#PointOfInterest -->
+
+    <owl:Class rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest">
+        <rdfs:label>POI</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q960648"/>
     </owl:Class>
     
 
@@ -561,13 +561,13 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/PointOfInterest"/>
+            <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RainLevel"/>
             <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/River"/>
-            <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/RiverLevel"/>
             <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/TidalLevel"/>
             <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WarningLevel"/>
             <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WaterLevel"/>
             <rdf:Description rdf:about="https://api.hyper-local.jp/suibou/WindDirection"/>
+            <rdf:Description rdf:about="https://uri.fiware.org/ns/datamodels#PointOfInterest"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
