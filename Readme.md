@@ -1,7 +1,7 @@
 # A trial of constructing an ontology and a NGSI-LD context for Saga Suibou data.
 Saga Suibou data comes from http://bousai.pref.saga.lg.jp/suibou/index.html .
 
-Diagrams in Japanese are showed in Suibou('Ymd').pdf.
+Diagrams in Japanese are shown in Suibou('Ymd').pdf.
 
 
 -----
